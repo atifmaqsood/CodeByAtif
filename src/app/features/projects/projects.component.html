@@ -1,0 +1,43 @@
+<div class="projects-page">
+    <section class="section">
+        <div class="container">
+            <app-section-title title="My Projects" subtitle="Explore my work and technical achievements"
+                [centered]="true" [gradient]="true">
+            </app-section-title>
+
+            <!-- Filters -->
+            <div class="filters">
+                <mat-form-field appearance="outline">
+                    <mat-label>Filter by Tag</mat-label>
+                    <mat-select [(ngModel)]="selectedTag" (selectionChange)="filterProjects()">
+                        <mat-option value="all">All Projects</mat-option>
+                        <mat-option *ngFor="let tag of allTags" [value]="tag">
+                            {{ tag }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Search Projects</mat-label>
+                    <input matInput [(ngModel)]="searchTerm" (ngModelChange)="filterProjects()"
+                        placeholder="Search by name or technology...">
+                </mat-form-field>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <app-project-card *ngFor="let project of filteredProjects; let i = index" [project]="project"
+                    class="fade-in" [style.animation-delay.ms]="i * 100">
+                </app-project-card>
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" *ngIf="filteredProjects.length === 0">
+                <p>No projects found matching your criteria.</p>
+                <button mat-raised-button color="primary" (click)="clearFilters()">
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

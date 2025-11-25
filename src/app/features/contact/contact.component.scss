@@ -1,0 +1,111 @@
+.contact-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-2xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    .info-card {
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        text-align: center;
+        transition: all var(--transition-base);
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        mat-icon {
+            font-size: 3rem;
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary-500);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+
+        a {
+            color: var(--primary-600);
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+    }
+}
+
+.contact-form-wrapper {
+    .contact-form {
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-xl);
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-primary);
+        }
+
+        mat-form-field {
+            width: 100%;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: var(--spacing-md);
+
+            mat-icon {
+                margin-right: 0.5rem;
+
+                &.spin {
+                    animation: rotate 1s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 968px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form-wrapper {
+        order: 1;
+    }
+}

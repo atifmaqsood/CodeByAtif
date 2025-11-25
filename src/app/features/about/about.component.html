@@ -1,0 +1,61 @@
+<div class="about-page">
+    <!-- About Section -->
+    <section class="about-section section">
+        <div class="container">
+            <app-section-title title="About Me" subtitle="Get to know more about my journey and expertise"
+                [centered]="true" [gradient]="true">
+            </app-section-title>
+
+            <div class="about-content">
+                <div class="bio-text fade-in-up">
+                    <p *ngFor="let paragraph of bioParagraphs">{{ paragraph }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section section">
+        <div class="container">
+            <app-section-title title="Skills & Expertise" subtitle="Technologies and tools I work with"
+                [centered]="true">
+            </app-section-title>
+
+            <div class="skills-categories">
+                <div class="skill-category" *ngFor="let category of skillCategories">
+                    <h3>{{ category.title }}</h3>
+                    <div class="skills-grid">
+                        <app-skill-chip *ngFor="let skill of getSkillsByCategory(category.id)" [name]="skill.name"
+                            [level]="skill.level">
+                        </app-skill-chip>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section section">
+        <div class="container">
+            <app-section-title title="Work Experience" subtitle="My professional journey" [centered]="true">
+            </app-section-title>
+
+            <app-experience-timeline [experiences]="experiences"></app-experience-timeline>
+        </div>
+    </section>
+
+    <!-- Download Resume -->
+    <section class="resume-section section">
+        <div class="container">
+            <div class="resume-card glassmorphism">
+                <mat-icon class="resume-icon">description</mat-icon>
+                <h3>Want to know more?</h3>
+                <p>Download my resume to get the complete picture of my skills and experience.</p>
+                <button mat-raised-button color="primary">
+                    <mat-icon>download</mat-icon>
+                    Download Resume
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

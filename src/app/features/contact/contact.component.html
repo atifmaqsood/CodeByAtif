@@ -1,0 +1,93 @@
+<app-animated-background></app-animated-background>
+
+<div class="contact-page">
+    <section class="section">
+        <div class="container">
+            <app-section-title title="Get In Touch" subtitle="Let's discuss your next project" [centered]="true"
+                [gradient]="true">
+            </app-section-title>
+
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info fade-in-up">
+                    <div class="info-card glassmorphism">
+                        <mat-icon>email</mat-icon>
+                        <h3>Email</h3>
+                        <a [href]="'mailto:' + personalInfo.email">{{ personalInfo.email }}</a>
+                    </div>
+
+                    <div class="info-card glassmorphism">
+                        <mat-icon>link</mat-icon>
+                        <h3>LinkedIn</h3>
+                        <a [href]="personalInfo.linkedin" target="_blank" rel="noopener">
+                            View Profile
+                        </a>
+                    </div>
+
+                    <div class="info-card glassmorphism">
+                        <mat-icon>location_on</mat-icon>
+                        <h3>Location</h3>
+                        <p>{{ personalInfo.location }}</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper fade-in-up">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form glassmorphism">
+                        <h3>Send Me a Message</h3>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Your Name</mat-label>
+                            <input matInput formControlName="name" placeholder="John Doe">
+                            <mat-icon matPrefix>person</mat-icon>
+                            <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+                                Name is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Your Email</mat-label>
+                            <input matInput formControlName="email" type="email" placeholder="john@example.com">
+                            <mat-icon matPrefix>email</mat-icon>
+                            <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+                                Email is required
+                            </mat-error>
+                            <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+                                Please enter a valid email
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Subject</mat-label>
+                            <input matInput formControlName="subject" placeholder="Project Inquiry">
+                            <mat-icon matPrefix>subject</mat-icon>
+                            <mat-error *ngIf="contactForm.get('subject')?.hasError('required')">
+                                Subject is required
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput formControlName="message" rows="6"
+                                placeholder="Tell me about your project..."></textarea>
+                            <mat-icon matPrefix>message</mat-icon>
+                            <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+                                Message is required
+                            </mat-error>
+                            <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+                                Message must be at least 10 characters
+                            </mat-error>
+                        </mat-form-field>
+
+                        <button mat-raised-button color="primary" type="submit"
+                            [disabled]="contactForm.invalid || isSubmitting" class="submit-btn">
+                            <mat-icon *ngIf="!isSubmitting">send</mat-icon>
+                            <mat-icon *ngIf="isSubmitting" class="spin">sync</mat-icon>
+                            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

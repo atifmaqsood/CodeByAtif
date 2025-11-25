@@ -1,0 +1,73 @@
+<app-animated-background></app-animated-background>
+
+<div class="home-page">
+    <!-- Hero Section -->
+    <section class="hero-section section">
+        <div class="container">
+            <div class="hero-content fade-in-up">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-title">
+                    <span class="gradient-text">{{ personalInfo.name }}</span>
+                </h1>
+                <h2 class="hero-subtitle">{{ personalInfo.role }}</h2>
+                <p class="hero-description">
+                    Building modern, scalable, and beautiful web applications with cutting-edge technologies.
+                </p>
+
+                <div class="hero-actions">
+                    <button mat-raised-button color="primary" routerLink="/projects" class="cta-primary">
+                        <mat-icon>work</mat-icon>
+                        View My Work
+                    </button>
+                    <button mat-raised-button routerLink="/contact" class="cta-secondary">
+                        <mat-icon>email</mat-icon>
+                        Get In Touch
+                    </button>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <p>Scroll to explore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-section section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <p>Showcasing some of my best work</p>
+            </div>
+
+            <div class="projects-grid">
+                <app-project-card *ngFor="let project of featuredProjects" [project]="project" class="fade-in">
+                </app-project-card>
+            </div>
+
+            <div class="view-all">
+                <button mat-raised-button color="primary" routerLink="/projects">
+                    View All Projects
+                    <mat-icon>arrow_forward</mat-icon>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content glassmorphism">
+                <h2>Let's Work Together</h2>
+                <p>Ready to bring your ideas to life? Let's create something amazing!</p>
+                <button mat-raised-button color="primary" routerLink="/contact">
+                    <mat-icon>send</mat-icon>
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

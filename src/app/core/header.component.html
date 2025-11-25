@@ -1,0 +1,32 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <mat-toolbar class="toolbar">
+        <div class="container toolbar-content">
+            <a routerLink="/" class="logo">
+                <span class="logo-text gradient-text">Atif Maqsood</span>
+            </a>
+
+            <nav class="nav-links" [class.mobile-open]="mobileMenuOpen">
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" mat-button
+                    (click)="closeMobileMenu()">
+                    Home
+                </a>
+                <a routerLink="/about" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
+                    About
+                </a>
+                <a routerLink="/projects" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
+                    Projects
+                </a>
+                <a routerLink="/experience" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
+                    Experience
+                </a>
+                <a routerLink="/contact" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
+                    Contact
+                </a>
+            </nav>
+
+            <button mat-icon-button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+                <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar>
+</header>
