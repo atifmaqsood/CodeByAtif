@@ -1,167 +1,252 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-animated-background',
-    imports: [],
-    template: `
+  selector: 'app-animated-background',
+  imports: [CommonModule],
+  template: `
     <div class="animated-background">
-      <div class="floating-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-      </div>
+      <!-- Floating Geometric Shapes -->
+      <div class="shape circle circle-1"></div>
+      <div class="shape circle circle-2"></div>
+      <div class="shape circle circle-3"></div>
+      <div class="shape rectangle rectangle-1"></div>
+      <div class="shape rectangle rectangle-2"></div>
+      <div class="shape triangle triangle-1"></div>
+      <div class="shape triangle triangle-2"></div>
       
-      <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:rgba(99, 102, 241, 0.1);stop-opacity:1" />
-            <stop offset="100%" style="stop-color:rgba(217, 70, 239, 0.1);stop-opacity:1" />
-          </linearGradient>
-          <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:rgba(217, 70, 239, 0.08);stop-opacity:1" />
-            <stop offset="100%" style="stop-color:rgba(99, 102, 241, 0.08);stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        
-        <!-- Animated waves -->
-        <path fill="url(#grad1)" opacity="0.5">
-          <animate attributeName="d" 
-            dur="20s" 
-            repeatCount="indefinite"
-            values="
-              M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 L1440,800 L0,800 Z;
-              M0,200 C320,100,420,100,740,200 C1060,300,1120,300,1440,200 L1440,800 L0,800 Z;
-              M0,160 C320,300,420,300,740,160 C1060,20,1120,20,1440,160 L1440,800 L0,800 Z;
-            "
-          />
-        </path>
-        
-        <path fill="url(#grad2)" opacity="0.5">
-          <animate attributeName="d" 
-            dur="25s" 
-            repeatCount="indefinite"
-            values="
-              M0,240 C360,100,480,100,840,240 C1200,380,1280,380,1440,240 L1440,800 L0,800 Z;
-              M0,300 C360,380,480,380,840,300 C1200,220,1280,220,1440,300 L1440,800 L0,800 Z;
-              M0,240 C360,100,480,100,840,240 C1200,380,1280,380,1440,240 L1440,800 L0,800 Z;
-            "
-          />
-        </path>
-      </svg>
+      <!-- Gradient Orbs -->
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      
+      <!-- Grid Pattern Overlay -->
+      <div class="grid-pattern"></div>
     </div>
   `,
-    styles: [`
+  styles: [`
     .animated-background {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
       z-index: -1;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-    }
-    
-    .floating-shapes {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+      background: linear-gradient(135deg, #0a0a0f 0%, #13131a 50%, #1a1a24 100%);
     }
     
     .shape {
       position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.3;
-      animation: float 20s ease-in-out infinite;
+      opacity: 0.15;
+      background: rgba(102, 126, 234, 0.1);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(102, 126, 234, 0.2);
     }
     
-    .shape-1 {
+    /* Circles */
+    .circle {
+      border-radius: 50%;
+    }
+    
+    .circle-1 {
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent);
-      top: 10%;
-      left: 10%;
-      animation-duration: 25s;
+      top: -100px;
+      right: -100px;
+      background: rgba(102, 126, 234, 0.08);
+      animation: float 20s ease-in-out infinite, rotate 30s linear infinite;
     }
     
-    .shape-2 {
-      width: 350px;
-      height: 350px;
-      background: radial-gradient(circle, rgba(217, 70, 239, 0.3), transparent);
-      top: 50%;
-      right: 10%;
-      animation-duration: 30s;
-      animation-delay: 5s;
-    }
-    
-    .shape-3 {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(236, 72, 153, 0.25), transparent);
-      bottom: 20%;
-      left: 20%;
-      animation-duration: 22s;
-      animation-delay: 2s;
-    }
-    
-    .shape-4 {
-      width: 450px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent);
-      top: 30%;
-      right: 30%;
-      animation-duration: 28s;
-      animation-delay: 7s;
-    }
-    
-    .shape-5 {
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent);
+    .circle-2 {
+      width: 250px;
+      height: 250px;
       bottom: 10%;
-      right: 15%;
-      animation-duration: 26s;
-      animation-delay: 3s;
+      left: 5%;
+      background: rgba(236, 72, 153, 0.08);
+      animation: float 15s ease-in-out infinite reverse, rotate 25s linear infinite;
+      animation-delay: -5s;
     }
     
-    .svg-background {
+    .circle-3 {
+      width: 180px;
+      height: 180px;
+      top: 50%;
+      right: 20%;
+      background: rgba(139, 92, 246, 0.08);
+      animation: float 18s ease-in-out infinite;
+      animation-delay: -10s;
+    }
+    
+    /* Rectangles */
+    .rectangle {
+      border-radius: 20px;
+    }
+    
+    .rectangle-1 {
+      width: 300px;
+      height: 200px;
+      top: 20%;
+      left: 10%;
+      background: rgba(79, 172, 254, 0.06);
+      animation: float 22s ease-in-out infinite, rotateSmall 40s linear infinite;
+      animation-delay: -3s;
+      transform: rotate(25deg);
+    }
+    
+    .rectangle-2 {
+      width: 200px;
+      height: 150px;
+      bottom: 20%;
+      right: 15%;
+      background: rgba(245, 87, 108, 0.06);
+      animation: float 19s ease-in-out infinite reverse, rotateSmall 35s linear infinite reverse;
+      animation-delay: -7s;
+      transform: rotate(-15deg);
+    }
+    
+    /* Triangles */
+    .triangle {
+      width: 0;
+      height: 0;
+      background: transparent;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+    }
+    
+    .triangle-1 {
+      border-bottom: 173px solid rgba(16, 185, 129, 0.08);
+      top: 15%;
+      right: 30%;
+      animation: float 17s ease-in-out infinite, rotate 45s linear infinite;
+      animation-delay: -4s;
+    }
+    
+    .triangle-2 {
+      border-bottom: 120px solid rgba(245, 158, 11, 0.08);
+      bottom: 30%;
+      left: 25%;
+      animation: float 21s ease-in-out infinite reverse, rotate 50s linear infinite reverse;
+      animation-delay: -8s;
+    }
+    
+    /* Gradient Orbs */
+    .orb {
       position: absolute;
-      bottom: 0;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      animation: pulse 8s ease-in-out infinite;
+    }
+    
+    .orb-1 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+      top: -200px;
+      left: -200px;
+      animation-delay: 0s;
+    }
+    
+    .orb-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+      bottom: -150px;
+      right: -150px;
+      animation-delay: -4s;
+    }
+    
+    .orb-3 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-delay: -2s;
+    }
+    
+    /* Grid Pattern */
+    .grid-pattern {
+      position: absolute;
+      top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.7;
+      background-image: 
+        linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.5;
     }
     
+    /* Animations */
     @keyframes float {
       0%, 100% {
-        transform: translate(0, 0) scale(1);
+        transform: translateY(0) translateX(0);
       }
       25% {
-        transform: translate(30px, -50px) scale(1.1);
+        transform: translateY(-30px) translateX(20px);
       }
       50% {
-        transform: translate(-20px, -80px) scale(0.9);
+        transform: translateY(-50px) translateX(-10px);
       }
       75% {
-        transform: translate(-40px, -30px) scale(1.05);
+        transform: translateY(-20px) translateX(30px);
+      }
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes rotateSmall {
+      0% {
+        transform: rotate(var(--initial-rotation, 0deg));
+      }
+      100% {
+        transform: rotate(calc(var(--initial-rotation, 0deg) + 360deg));
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.5;
+        transform: scale(1.1);
       }
     }
     
     @media (max-width: 768px) {
       .shape {
-        filter: blur(40px);
+        opacity: 0.1;
       }
       
-      .shape-1, .shape-2, .shape-3, .shape-4, .shape-5 {
-        width: 200px;
-        height: 200px;
+      .circle-1 {
+        width: 250px;
+        height: 250px;
+      }
+      
+      .rectangle-1,
+      .rectangle-2 {
+        width: 150px;
+        height: 100px;
+      }
+      
+      .orb {
+        filter: blur(60px);
       }
     }
   `]
 })
-export class AnimatedBackgroundComponent { }
+export class AnimatedBackgroundComponent {
+}

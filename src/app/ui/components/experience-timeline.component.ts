@@ -5,9 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { Experience } from '../../data/models/portfolio.model';
 
 @Component({
-    selector: 'app-experience-timeline',
-    imports: [CommonModule, MatExpansionModule, MatIconModule],
-    template: `
+  selector: 'app-experience-timeline',
+  imports: [CommonModule, MatExpansionModule, MatIconModule],
+  template: `
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences; let i = index" 
            [class.animate-in]="true"
@@ -62,7 +62,7 @@ import { Experience } from '../../data/models/portfolio.model';
       </div>
     </div>
   `,
-    styles: [`
+  styles: [`
     .timeline {
       position: relative;
       padding: var(--spacing-md) 0;
@@ -95,15 +95,15 @@ import { Experience } from '../../data/models/portfolio.model';
         height: 20px;
         border-radius: 50%;
         background: var(--gradient-primary);
-        border: 4px solid white;
-        box-shadow: var(--shadow-md);
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
         z-index: 1;
       }
       
       .marker-line {
         width: 2px;
         flex: 1;
-        background: linear-gradient(to bottom, var(--primary-300), transparent);
+        background: linear-gradient(to bottom, rgba(99, 102, 241, 0.5), transparent);
         margin-top: 8px;
       }
     }
@@ -111,14 +111,35 @@ import { Experience } from '../../data/models/portfolio.model';
     .timeline-content {
       flex: 1;
       
-      mat-expansion-panel {
+      ::ng-deep mat-expansion-panel {
         border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-md);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         transition: all var(--transition-base);
         
         &:hover {
-          box-shadow: var(--shadow-xl);
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(99, 102, 241, 0.3);
+          box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
         }
+
+        &.mat-expanded {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(99, 102, 241, 0.4);
+        }
+      }
+      
+      ::ng-deep .mat-expansion-panel-header {
+        padding: 1.5rem;
+        
+        &:hover {
+          background: transparent !important;
+        }
+      }
+
+      ::ng-deep .mat-expansion-panel-body {
+        padding: 0 1.5rem 1.5rem;
       }
     }
     
@@ -135,13 +156,13 @@ import { Experience } from '../../data/models/portfolio.model';
       h3 {
         font-size: 1.25rem;
         font-weight: 700;
-        color: var(--text-primary);
+        color: white;
         margin-bottom: 0.25rem;
       }
       
       .company {
         font-size: 1rem;
-        color: var(--primary-600);
+        color: var(--primary-light);
         font-weight: 600;
         margin: 0;
       }
@@ -149,11 +170,12 @@ import { Experience } from '../../data/models/portfolio.model';
     
     .date-badge {
       padding: 0.5rem 1rem;
-      background: var(--bg-tertiary);
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
       border-radius: var(--radius-sm);
       font-size: 0.875rem;
       font-weight: 600;
-      color: var(--text-secondary);
+      color: var(--primary-light);
       white-space: nowrap;
     }
     
@@ -171,11 +193,12 @@ import { Experience } from '../../data/models/portfolio.model';
           font-size: 1.25rem;
           width: 1.25rem;
           height: 1.25rem;
+          color: var(--primary-light);
         }
       }
       
       .description {
-        color: var(--text-secondary);
+        color: rgba(255, 255, 255, 0.8);
         margin-bottom: var(--spacing-md);
         line-height: 1.6;
       }
@@ -187,7 +210,7 @@ import { Experience } from '../../data/models/portfolio.model';
           font-size: 1rem;
           font-weight: 600;
           margin-bottom: var(--spacing-sm);
-          color: var(--text-primary);
+          color: white;
         }
         
         ul {
@@ -198,13 +221,13 @@ import { Experience } from '../../data/models/portfolio.model';
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.8);
             
             &::before {
               content: '→';
               position: absolute;
               left: 0;
-              color: var(--primary-500);
+              color: var(--primary-light);
               font-weight: 600;
             }
           }
@@ -216,7 +239,7 @@ import { Experience } from '../../data/models/portfolio.model';
           font-size: 1rem;
           font-weight: 600;
           margin-bottom: var(--spacing-sm);
-          color: var(--text-primary);
+          color: white;
         }
         
         .tech-list {
@@ -227,12 +250,12 @@ import { Experience } from '../../data/models/portfolio.model';
         
         .tech-badge {
           padding: 0.25rem 0.75rem;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(217, 70, 239, 0.1));
-          border: 1px solid rgba(99, 102, 241, 0.2);
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(217, 70, 239, 0.15));
+          border: 1px solid rgba(99, 102, 241, 0.3);
           border-radius: var(--radius-sm);
           font-size: 0.75rem;
           font-weight: 500;
-          color: var(--primary-700);
+          color: var(--primary-light);
         }
       }
     }
@@ -254,5 +277,5 @@ import { Experience } from '../../data/models/portfolio.model';
   `]
 })
 export class ExperienceTimelineComponent {
-    @Input() experiences: Experience[] = [];
+  @Input() experiences: Experience[] = [];
 }

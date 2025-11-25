@@ -1,61 +1,89 @@
-<div class="about-page">
-    <!-- About Section -->
-    <section class="about-section section">
-        <div class="container">
-            <app-section-title title="About Me" subtitle="Get to know more about my journey and expertise"
-                [centered]="true" [gradient]="true">
-            </app-section-title>
+<app-animated-background></app-animated-background>
 
-            <div class="about-content">
-                <div class="bio-text fade-in-up">
+<div class="about-page">
+    <div class="container">
+        <!-- Header Section -->
+        <div class="page-header">
+            <app-section-title title="About Me" subtitle="Get to know the person behind the code" [centered]="true"
+                [gradient]="true">
+            </app-section-title>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="about-content glassmorphism glow">
+            <!-- Left Column: Image & Quick Info -->
+            <div class="profile-column">
+                <div class="image-container">
+                    <img src="assets/atif_images/1763202671877.jpeg" alt="Atif Maqsood" />
+                </div>
+
+                <div class="social-actions">
+                    <a [href]="personalInfo.linkedin" target="_blank" class="social-btn linkedin">
+                        <mat-icon>link</mat-icon>
+                        LinkedIn
+                    </a>
+                    <a [href]="'mailto:' + personalInfo.email" class="social-btn email">
+                        <mat-icon>email</mat-icon>
+                        Email
+                    </a>
+                </div>
+
+                <button mat-stroked-button color="primary" class="resume-btn">
+                    <mat-icon>download</mat-icon>
+                    Download Resume
+                </button>
+            </div>
+
+            <!-- Right Column: Bio & Details -->
+            <div class="bio-column">
+                <h2 class="role-title gradient-text">{{ personalInfo.role }}</h2>
+
+                <div class="bio-text">
                     <p *ngFor="let paragraph of bioParagraphs">{{ paragraph }}</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Location:</span>
+                        <span class="value">{{ personalInfo.location }}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Experience:</span>
+                        <span class="value">3+ Years</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <span class="value">{{ personalInfo.email }}</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section section">
-        <div class="container">
-            <app-section-title title="Skills & Expertise" subtitle="Technologies and tools I work with"
-                [centered]="true">
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <app-section-title title="Technical Skills" subtitle="My Arsenal" [centered]="true">
             </app-section-title>
 
-            <div class="skills-categories">
-                <div class="skill-category" *ngFor="let category of skillCategories">
-                    <h3>{{ category.title }}</h3>
-                    <div class="skills-grid">
+            <div class="skills-wrapper">
+                <div class="skill-category glassmorphism" *ngFor="let category of skillCategories">
+                    <h3 class="category-title">{{ category.title }}</h3>
+                    <div class="skills-list">
                         <app-skill-chip *ngFor="let skill of getSkillsByCategory(category.id)" [name]="skill.name"
                             [level]="skill.level">
                         </app-skill-chip>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section class="experience-section section">
-        <div class="container">
-            <app-section-title title="Work Experience" subtitle="My professional journey" [centered]="true">
+        <!-- Experience Section -->
+        <section class="experience-section">
+            <app-section-title title="Experience" subtitle="My Professional Journey" [centered]="true">
             </app-section-title>
 
-            <app-experience-timeline [experiences]="experiences"></app-experience-timeline>
-        </div>
-    </section>
-
-    <!-- Download Resume -->
-    <section class="resume-section section">
-        <div class="container">
-            <div class="resume-card glassmorphism">
-                <mat-icon class="resume-icon">description</mat-icon>
-                <h3>Want to know more?</h3>
-                <p>Download my resume to get the complete picture of my skills and experience.</p>
-                <button mat-raised-button color="primary">
-                    <mat-icon>download</mat-icon>
-                    Download Resume
-                </button>
+            <div class="timeline-container glassmorphism">
+                <app-experience-timeline [experiences]="experiences"></app-experience-timeline>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </div>

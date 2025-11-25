@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// Rebuild trigger
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,6 +9,7 @@ import { ExperienceTimelineComponent } from '../../ui/components/experience-time
 import { PERSONAL_INFO } from '../../data/content/personal-info.data';
 import { SKILLS } from '../../data/content/skills.data';
 import { EXPERIENCES } from '../../data/content/experiences.data';
+import { AnimatedBackgroundComponent } from '../../ui/svg/animated-background.component';
 
 @Component({
   selector: 'app-about',
@@ -17,7 +19,8 @@ import { EXPERIENCES } from '../../data/content/experiences.data';
     MatIconModule,
     SectionTitleComponent,
     SkillChipComponent,
-    ExperienceTimelineComponent
+    ExperienceTimelineComponent,
+    AnimatedBackgroundComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'

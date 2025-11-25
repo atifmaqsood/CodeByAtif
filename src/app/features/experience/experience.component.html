@@ -1,25 +1,31 @@
+<app-animated-background></app-animated-background>
+
 <div class="experience-page">
-    <section class="section">
+    <section class="experience-hero">
         <div class="container">
             <app-section-title title="Professional Experience" subtitle="My career journey and achievements"
                 [centered]="true" [gradient]="true">
             </app-section-title>
 
             <div class="experience-stats fade-in-up">
-                <div class="stat-card">
+                <div class="stat-card glassmorphism glow">
                     <div class="stat-number gradient-text">{{ yearsOfExperience }}+</div>
                     <div class="stat-label">Years of Experience</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card glassmorphism glow">
                     <div class="stat-number gradient-text">{{ companies }}</div>
                     <div class="stat-label">Companies</div>
                 </div>
-                <div class="stat-card">
+                <div class="stat-card glassmorphism glow">
                     <div class="stat-number gradient-text">{{ projects }}+</div>
                     <div class="stat-label">Projects Completed</div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section class="experience-timeline-section">
+        <div class="container">
             <app-experience-timeline [experiences]="experiences"></app-experience-timeline>
         </div>
     </section>

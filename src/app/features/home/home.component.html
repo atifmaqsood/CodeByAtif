@@ -1,55 +1,126 @@
 <app-animated-background></app-animated-background>
 
 <div class="home-page">
-    <!-- Hero Section -->
-    <section class="hero-section section">
-        <div class="container">
+    <!-- Hero Section - Full Width -->
+    <section class="hero-section">
+        <div class="hero-grid">
+            <!-- Left: Profile Image -->
+            <div class="hero-image fade-in">
+                <div class="image-wrapper glassmorphism glow">
+                    <img src="../../../assets/atif_images/1713177995158.jpeg" alt="Atif Maqsood" />
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Right: Hero Content -->
             <div class="hero-content fade-in-up">
-                <p class="hero-greeting">Hi, I'm</p>
+                <p class="hero-greeting">👋 Hello, I'm</p>
                 <h1 class="hero-title">
                     <span class="gradient-text">{{ personalInfo.name }}</span>
                 </h1>
                 <h2 class="hero-subtitle">{{ personalInfo.role }}</h2>
                 <p class="hero-description">
                     Building modern, scalable, and beautiful web applications with cutting-edge technologies.
+                    Specialized in Angular, React, Node.js, and cloud-native solutions.
                 </p>
 
                 <div class="hero-actions">
-                    <button mat-raised-button color="primary" routerLink="/projects" class="cta-primary">
+                    <button mat-raised-button color="primary" routerLink="/projects" class="cta-primary glow">
                         <mat-icon>work</mat-icon>
                         View My Work
                     </button>
-                    <button mat-raised-button routerLink="/contact" class="cta-secondary">
+                    <button mat-raised-button routerLink="/contact" class="cta-secondary glassmorphism">
                         <mat-icon>email</mat-icon>
                         Get In Touch
                     </button>
                 </div>
 
-                <div class="scroll-indicator">
-                    <div class="mouse">
-                        <div class="wheel"></div>
+                <!-- Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item glassmorphism">
+                        <div class="stat-number gradient-text">3+</div>
+                        <div class="stat-label">Years Experience</div>
                     </div>
-                    <p>Scroll to explore</p>
+                    <div class="stat-item glassmorphism">
+                        <div class="stat-number gradient-text">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item glassmorphism">
+                        <div class="stat-number gradient-text">5</div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Skills Highlight Section -->
+    <section class="skills-highlight-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Core <span class="gradient-text">Expertise</span></h2>
+                <p>Technologies I excel at</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card glassmorphism glow" *ngFor="let skill of highlightedSkills; let i = index"
+                    [style.animation-delay.ms]="i * 100">
+                    <mat-icon class="skill-icon">{{ skill.icon }}</mat-icon>
+                    <h3>{{ skill.name }}</h3>
+                    <div class="skill-bar">
+                        <div class="skill-fill" [style.width.%]="skill.level"></div>
+                    </div>
+                    <span class="skill-percentage">{{ skill.level }}%</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-section section">
+    <!-- Services Section -->
+    <section class="services-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header fade-in-up">
+                <h2>What I <span class="gradient-text">Offer</span></h2>
+                <p>Services to bring your ideas to life</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card glassmorphism" *ngFor="let service of services; let i = index"
+                    [style.animation-delay.ms]="i * 100">
+                    <div class="service-icon-wrapper">
+                        <mat-icon class="service-icon">{{ service.icon }}</mat-icon>
+                    </div>
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects - Full Width -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
                 <h2>Featured <span class="gradient-text">Projects</span></h2>
-                <p>Showcasing some of my best work</p>
+                <p>Showcasing my best work and technical achievements</p>
             </div>
 
             <div class="projects-grid">
-                <app-project-card *ngFor="let project of featuredProjects" [project]="project" class="fade-in">
+                <app-project-card *ngFor="let project of featuredProjects; let i = index" [project]="project"
+                    class="fade-in" [style.animation-delay.ms]="i * 100">
                 </app-project-card>
             </div>
 
             <div class="view-all">
-                <button mat-raised-button color="primary" routerLink="/projects">
+                <button mat-raised-button color="primary" routerLink="/projects" class="glow">
                     View All Projects
                     <mat-icon>arrow_forward</mat-icon>
                 </button>
@@ -60,12 +131,13 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content glassmorphism">
-                <h2>Let's Work Together</h2>
-                <p>Ready to bring your ideas to life? Let's create something amazing!</p>
-                <button mat-raised-button color="primary" routerLink="/contact">
+            <div class="cta-content glassmorphism glow fade-in-up">
+                <h2>Let's Build Something Amazing Together</h2>
+                <p>Have a project in mind? Let's discuss how we can bring your ideas to life with cutting-edge
+                    technology.</p>
+                <button mat-raised-button color="primary" routerLink="/contact" class="glow">
                     <mat-icon>send</mat-icon>
-                    Contact Me
+                    Start a Conversation
                 </button>
             </div>
         </div>

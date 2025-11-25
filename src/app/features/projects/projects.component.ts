@@ -5,8 +5,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 import { SectionTitleComponent } from '../../ui/components/section-title.component';
 import { ProjectCardComponent } from '../../ui/components/project-card.component';
+import { AnimatedBackgroundComponent } from '../../ui/svg/animated-background.component';
 import { PROJECTS } from '../../data/content/projects.data';
 import { Project } from '../../data/models/portfolio.model';
 
@@ -19,8 +21,10 @@ import { Project } from '../../data/models/portfolio.model';
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
+    MatIconModule,
     SectionTitleComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    AnimatedBackgroundComponent
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'

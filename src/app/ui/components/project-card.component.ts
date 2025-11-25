@@ -62,18 +62,24 @@ import { Project } from '../../data/models/portfolio.model';
       transition: all var(--transition-base);
       border-radius: var(--radius-lg);
       overflow: hidden;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       
       &:hover {
         transform: translateY(-8px);
         box-shadow: var(--shadow-2xl);
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(99, 102, 241, 0.3);
         
         &.featured {
-          box-shadow: var(--shadow-glow);
+          box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
         }
       }
       
       &.featured {
-        border: 2px solid var(--primary-400);
+        border: 2px solid rgba(99, 102, 241, 0.4);
+        background: rgba(99, 102, 241, 0.05);
       }
     }
     
@@ -103,6 +109,7 @@ import { Project } from '../../data/models/portfolio.model';
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 0;
+      color: white;
     }
     
     mat-card-content {
@@ -110,7 +117,7 @@ import { Project } from '../../data/models/portfolio.model';
       padding: 0 var(--spacing-md);
       
       .description {
-        color: var(--text-secondary);
+        color: rgba(255, 255, 255, 0.7);
         margin-bottom: var(--spacing-md);
         line-height: 1.6;
       }
@@ -119,8 +126,9 @@ import { Project } from '../../data/models/portfolio.model';
         margin-bottom: var(--spacing-md);
         
         mat-chip {
-          background: var(--bg-tertiary);
-          color: var(--text-primary);
+          background: rgba(99, 102, 241, 0.15);
+          color: rgba(255, 255, 255, 0.9);
+          border: 1px solid rgba(99, 102, 241, 0.3);
         }
       }
       
@@ -129,7 +137,7 @@ import { Project } from '../../data/models/portfolio.model';
           display: block;
           font-size: 0.875rem;
           font-weight: 600;
-          color: var(--text-primary);
+          color: rgba(255, 255, 255, 0.8);
           margin-bottom: var(--spacing-xs);
         }
         
@@ -142,10 +150,10 @@ import { Project } from '../../data/models/portfolio.model';
         .tech-chip {
           font-size: 0.75rem;
           padding: 0.25rem 0.75rem;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(217, 70, 239, 0.1));
-          border: 1px solid rgba(99, 102, 241, 0.2);
+          background: rgba(139, 92, 246, 0.15);
+          border: 1px solid rgba(139, 92, 246, 0.3);
           border-radius: 1rem;
-          color: var(--primary-700);
+          color: rgba(196, 181, 253, 1);
           font-weight: 500;
         }
       }
@@ -155,6 +163,7 @@ import { Project } from '../../data/models/portfolio.model';
       padding: var(--spacing-md);
       display: flex;
       gap: var(--spacing-sm);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
       
       button {
         mat-icon {
