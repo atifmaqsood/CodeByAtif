@@ -14,7 +14,6 @@ import { Project } from '../../data/models/portfolio.model';
       <!-- Animated background circles -->
       <div class="bg-circle circle-1"></div>
       <div class="bg-circle circle-2"></div>
-      <div class="bg-circle circle-3"></div>
       
       <mat-card class="project-card" [class.featured]="project.featured">
         <div class="card-shine"></div>
@@ -68,6 +67,7 @@ import { Project } from '../../data/models/portfolio.model';
       position: relative;
       height: 100%;
       min-height: 500px;
+      transform: translateZ(0); /* Force GPU layer */
     }
     
     /* Animated glowing circles behind cards */
@@ -75,51 +75,40 @@ import { Project } from '../../data/models/portfolio.model';
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
+      will-change: transform; /* Hint browser for optimization */
       animation: floatAround 12s ease-in-out infinite;
+      opacity: 0.4; /* Reduced opacity for better performance */
     }
     
     .circle-1 {
-      width: 280px;
-      height: 280px;
-      background: radial-gradient(circle at center, rgba(99, 102, 241, 0.4) 0%, rgba(99, 102, 241, 0.1) 40%, transparent 70%);
-      top: -80px;
-      left: -80px;
-      filter: blur(40px);
+      width: 200px; /* Reduced size */
+      height: 200px;
+      background: radial-gradient(circle at center, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+      top: -40px;
+      left: -40px;
+      filter: blur(20px); /* Reduced blur */
       animation-delay: 0s;
     }
     
     .circle-2 {
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0.1) 40%, transparent 70%);
-      bottom: -60px;
-      right: -60px;
-      filter: blur(35px);
-      animation-delay: 2s;
-    }
-    
-    .circle-3 {
-      width: 180px;
+      width: 180px; /* Reduced size */
       height: 180px;
-      background: radial-gradient(circle at center, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
-      top: 50%;
+      background: radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, transparent 70%);
+      bottom: -40px;
       right: -40px;
-      filter: blur(30px);
-      animation-delay: 4s;
+      filter: blur(20px); /* Reduced blur */
+      animation-delay: 2s;
     }
     
     @keyframes floatAround {
       0%, 100% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.6;
+        transform: translate3d(0, 0, 0) scale(1);
       }
       33% {
-        transform: translate(20px, -20px) scale(1.1);
-        opacity: 0.8;
+        transform: translate3d(15px, -15px, 0) scale(1.05);
       }
       66% {
-        transform: translate(-15px, 15px) scale(0.9);
-        opacity: 0.7;
+        transform: translate3d(-10px, 10px, 0) scale(0.95);
       }
     }
     
@@ -138,8 +127,8 @@ import { Project } from '../../data/models/portfolio.model';
         rgba(255, 255, 255, 0.1) 0%,
         rgba(255, 255, 255, 0.05) 100%
       );
-      backdrop-filter: blur(30px) saturate(200%);
-      -webkit-backdrop-filter: blur(30px) saturate(200%);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
       
       border: 1.5px solid rgba(255, 255, 255, 0.18);
       box-shadow: 
