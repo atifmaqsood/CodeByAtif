@@ -24,9 +24,15 @@
                 </a>
             </nav>
 
-            <button mat-icon-button class="mobile-menu-btn" (click)="toggleMobileMenu()">
-                <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
-            </button>
+            <div class="header-actions">
+                <button mat-raised-button class="download-resume-btn" (click)="downloadResume()">
+                    <mat-icon>download</mat-icon>
+                    <span class="btn-text">Resume</span>
+                </button>
+                <button mat-icon-button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+                    <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+                </button>
+            </div>
         </div>
     </mat-toolbar>
 </header>

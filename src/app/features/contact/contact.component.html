@@ -19,6 +19,19 @@
                         <a [href]="'mailto:' + personalInfo.email">{{ personalInfo.email }}</a>
                     </div>
 
+                    <div class="info-card glassmorphism glow" *ngIf="personalInfo.phone">
+                        <div class="icon-wrapper">
+                            <mat-icon>phone</mat-icon>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>Call or WhatsApp</p>
+                        <div class="phone-numbers">
+                            <a *ngFor="let phone of personalInfo.phone" [href]="'tel:' + phone" class="phone-link">
+                                {{ phone }}
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="info-card glassmorphism glow">
                         <div class="icon-wrapper">
                             <mat-icon>link</mat-icon>

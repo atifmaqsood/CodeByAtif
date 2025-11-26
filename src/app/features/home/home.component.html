@@ -54,12 +54,12 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
+        <!-- <div class="scroll-indicator">
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
             <p>Scroll to explore</p>
-        </div>
+        </div> -->
     </section>
 
     <!-- Skills Highlight Section -->
@@ -100,6 +100,51 @@
                     </div>
                     <h3>{{ service.title }}</h3>
                     <p>{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="experience-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Professional <span class="gradient-text">Journey</span></h2>
+                <p>My career path and key achievements</p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="experience-card glassmorphism" *ngFor="let exp of experiences; let i = index"
+                    [style.animation-delay.ms]="i * 150">
+                    <div class="experience-header">
+                        <div class="company-logo">
+                            <mat-icon>{{ exp.logo }}</mat-icon>
+                        </div>
+                        <div class="experience-info">
+                            <h3>{{ exp.role }}</h3>
+                            <h4>{{ exp.company }}</h4>
+                            <span class="period">
+                                <mat-icon>calendar_today</mat-icon>
+                                {{ exp.period }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="experience-description">{{ exp.description }}</p>
+
+                    <div class="achievements">
+                        <h5>Key Achievements:</h5>
+                        <ul>
+                            <li *ngFor="let achievement of exp.achievements">
+                                <mat-icon>check_circle</mat-icon>
+                                {{ achievement }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="technologies">
+                        <span class="tech-badge" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -30,4 +30,11 @@ export class HeaderComponent {
   closeMobileMenu() {
     this.mobileMenuOpen = false;
   }
+
+  downloadResume() {
+    const link = document.createElement('a');
+    link.href = '../../../assets/atif_images/Profile.pdf';
+    link.download = 'Atif_Maqsood_Resume.pdf';
+    link.click();
+  }
 }

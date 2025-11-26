@@ -4,86 +4,77 @@ export const EXPERIENCES: Experience[] = [
     {
         id: '1',
         company: 'NKU Technologies',
-        position: 'Senior Full Stack Developer',
-        location: 'Lahore, Pakistan',
-        startDate: '2023-01',
+        position: 'Full Stack Developer',
+        location: 'Lahore, Punjab, Pakistan',
+        startDate: '2024-11',
         endDate: 'Present',
-        description: 'Leading development of micro frontend architecture and enterprise applications',
+        description: 'Working on enterprise-level applications using Angular, React, and Node.js, integrating Prisma ORM, and implementing micro front-end solutions for modular scalability.',
         responsibilities: [
-            'Architected and implemented micro frontend system using Angular 19-20 with Webpack Module Federation',
-            'Developed cross-origin authentication system using BroadcastChannel API',
-            'Built custom Express-based dev server with live reload capabilities',
-            'Led Angular Material theme migration from v13 to v19',
-            'Mentored junior developers on best practices and code reviews'
+            'Architected and implemented micro-frontend architecture',
+            'Integrated Prisma ORM for efficient database management',
+            'Developed scalable web applications using Angular, React, and Node.js',
+            'Mentored junior developers and conducted code reviews'
         ],
-        technologies: ['Angular', 'TypeScript', 'RxJS', 'Node.js', 'Express', 'Webpack', 'SCSS']
+        technologies: ['Angular', 'React', 'Node.js', 'Prisma ORM', 'Micro Frontends', 'TypeScript']
     },
     {
         id: '2',
-        company: 'eFAIDA',
-        position: 'Full Stack Developer',
-        location: 'Lahore, Pakistan',
-        startDate: '2022-06',
-        endDate: '2023-01',
-        description: 'Developed ERP integrations and financial automation systems',
+        company: 'esoftbay',
+        position: 'Angular Developer',
+        location: 'Lahore, Punjab, Pakistan',
+        startDate: '2024-06',
+        endDate: '2024-11',
+        description: 'Specialized in Angular development for client projects.',
         responsibilities: [
-            'Implemented Bill.com API integrations for financial workflows',
-            'Built OCR invoice ingestion system with automated data extraction',
-            'Designed and developed COA traceability features',
-            'Created workflow engine for automated business processes',
-            'Developed BOM hierarchical processing using SQL recursive CTEs'
+            'Developed and maintained Angular applications',
+            'Implemented responsive UI designs',
+            'Collaborated with cross-functional teams'
         ],
-        technologies: ['Node.js', 'Angular', 'SQL Server', 'APIs', 'OCR', 'MongoDB']
+        technologies: ['Angular', 'TypeScript', 'RxJS', 'SCSS']
     },
     {
         id: '3',
         company: 'Codeteck',
         position: 'Angular Developer',
-        location: 'Lahore, Pakistan',
-        startDate: '2021-08',
-        endDate: '2022-06',
-        description: 'Specialized in Angular frontend development and UI/UX implementation',
+        location: 'Lahore, Punjab, Pakistan',
+        startDate: '2023-05',
+        endDate: '2024-06',
+        description: 'Angular development and UI implementation.',
         responsibilities: [
-            'Developed responsive web applications using Angular and Angular Material',
-            'Implemented complex UI components with custom animations',
-            'Integrated RESTful APIs and state management solutions',
-            'Optimized application performance and bundle sizes',
-            'Collaborated with designers to implement pixel-perfect UI'
+            'Built responsive web interfaces',
+            'Integrated RESTful APIs',
+            'Optimized application performance'
         ],
-        technologies: ['Angular', 'TypeScript', 'Angular Material', 'RxJS', 'SCSS', 'NgRx']
+        technologies: ['Angular', 'TypeScript', 'Angular Material']
     },
     {
         id: '4',
         company: 'Contour Software',
-        position: 'Frontend Developer',
-        location: 'Lahore, Pakistan',
-        startDate: '2021-01',
-        endDate: '2021-08',
-        description: 'Built modern web applications using Vue.js and React',
+        position: 'Trainee Software Engineer',
+        location: 'Lahore, Punjab, Pakistan',
+        startDate: '2022-12',
+        endDate: '2023-03',
+        description: 'Trainee role focusing on software engineering fundamentals.',
         responsibilities: [
-            'Developed ShopNova e-commerce platform using Vue.js',
-            'Created reusable component libraries',
-            'Implemented responsive designs for mobile and desktop',
-            'Integrated payment gateway APIs',
-            'Performed cross-browser testing and optimization'
+            'Assisted in development tasks',
+            'Learned and applied software engineering best practices',
+            'Participated in team meetings and training sessions'
         ],
-        technologies: ['Vue.js', 'React', 'JavaScript', 'CSS3', 'Webpack']
+        technologies: ['JavaScript', 'HTML', 'CSS']
     },
     {
         id: '5',
-        company: 'esoftbay',
-        position: 'WordPress Developer',
-        location: 'Lahore, Pakistan',
-        startDate: '2020-01',
-        endDate: '2021-01',
-        description: 'Custom WordPress theme and plugin development',
+        company: 'eFAIDA (Pvt.) Limited',
+        position: 'Frontend Developer',
+        location: 'Okara',
+        startDate: '2022-06',
+        endDate: '2022-11',
+        description: 'Delivered responsive web interfaces using Bootstrap.',
         responsibilities: [
-            'Developed custom WordPress themes from scratch',
-            'Created custom plugins for client-specific requirements',
-            'Implemented WooCommerce customizations',
-            'Optimized site performance and SEO',
-            'Provided technical support and maintenance'
+            'Developed responsive web interfaces using Bootstrap',
+            'Contributed to end-to-end project execution',
+            'Ensured cross-browser compatibility'
         ],
-        technologies: ['WordPress', 'PHP', 'JavaScript', 'MySQL', 'WooCommerce', 'CSS3']
+        technologies: ['Bootstrap', 'HTML', 'CSS', 'JavaScript']
     }
 ];

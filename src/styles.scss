@@ -1,10 +1,3 @@
-@import './theme.scss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
-/* ===============================================
-   DARK THEME - MODERN PORTFOLIO
-   =============================================== */
-
 :root {
     /* Dark Color Palette */
     --bg-primary: #0a0a0f;
@@ -277,7 +270,7 @@ a {
 
 .mat-mdc-form-field {
     .mdc-text-field {
-        background-color: var(--bg-card) !important;
+        background-color: transparent !important;
     }
 
     .mat-mdc-input-element {
@@ -287,6 +280,53 @@ a {
     .mat-mdc-form-field-label {
         color: var(--text-secondary) !important;
     }
+}
+
+/* Angular Material Outline Form Field - Dark Theme */
+.mat-form-field-appearance-outline {
+    .mat-form-field-outline {
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    .mat-form-field-outline-thick {
+        color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    &.mat-focused {
+        .mat-form-field-outline-thick {
+            color: var(--primary) !important;
+        }
+
+        .mat-form-field-label {
+            color: var(--primary) !important;
+        }
+    }
+
+    .mat-input-element {
+        color: #fff !important;
+        caret-color: var(--primary);
+    }
+
+    .mat-input-element::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .mat-form-field-label {
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .mat-icon {
+        color: #fff !important;
+    }
+}
+
+/* Textarea specific overrides */
+.mat-form-field-appearance-outline textarea.mat-input-element {
+    color: #fff !important;
+}
+
+.mat-form-field-appearance-outline textarea.mat-input-element::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* Responsive */

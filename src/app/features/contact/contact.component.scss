@@ -89,6 +89,25 @@
                     text-decoration: underline;
                 }
             }
+
+            .phone-numbers {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+
+                .phone-link {
+                    font-size: 1.1rem;
+                    color: var(--primary-light);
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--primary);
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 
@@ -131,6 +150,36 @@
                 }
             }
 
+            /* Dark‑theme styling (forced with ::ng-deep) */
+            ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+                color: rgba(255, 255, 255, 0.3) !important;
+            }
+
+            ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+                color: var(--primary) !important;
+            }
+
+            ::ng-deep .mat-input-element {
+                caret-color: var(--primary);
+                color: #fff !important;
+            }
+
+            ::ng-deep .mat-input-element::placeholder {
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+
+            ::ng-deep .mat-form-field-label {
+                color: rgba(255, 255, 255, 0.7) !important;
+            }
+
+            ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+                color: var(--primary) !important;
+            }
+
+            ::ng-deep .mat-form-field-prefix .mat-icon {
+                color: #fff !important;
+            }
+
             .submit-btn {
                 width: 100%;
                 padding: 1.2rem;
@@ -138,9 +187,19 @@
                 font-weight: 600;
                 margin-top: 1rem;
                 border-radius: 1rem;
+                background: var(--primary);
+                color: #fff;
+                border: none;
+                transition: background 0.3s ease, transform 0.2s;
+
+                &:hover {
+                    background: var(--primary-light);
+                    transform: translateY(-2px);
+                }
 
                 mat-icon {
                     margin-right: 0.5rem;
+                    color: #fff;
 
                     &.spin {
                         animation: rotate 1s linear infinite;
