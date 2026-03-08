@@ -13,6 +13,23 @@
                 <a routerLink="/about" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
                     About
                 </a>
+                <button mat-button [matMenuTriggerFor]="domainMenu">
+                    Domains <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+                </button>
+                <mat-menu #domainMenu="matMenu" class="domain-menu">
+                    <a routerLink="/domains/manufacturing" mat-menu-item (click)="closeMobileMenu()">
+                        <mat-icon>precision_manufacturing</mat-icon> Manufacturing
+                    </a>
+                    <a routerLink="/domains/healthcare" mat-menu-item (click)="closeMobileMenu()">
+                        <mat-icon>medical_services</mat-icon> Healthcare
+                    </a>
+                    <a routerLink="/domains/fintech" mat-menu-item (click)="closeMobileMenu()">
+                        <mat-icon>account_balance</mat-icon> FinTech
+                    </a>
+                    <a routerLink="/domains/finance" mat-menu-item (click)="closeMobileMenu()">
+                        <mat-icon>monetization_on</mat-icon> Finance
+                    </a>
+                </mat-menu>
                 <a routerLink="/projects" routerLinkActive="active" mat-button (click)="closeMobileMenu()">
                     Projects
                 </a>

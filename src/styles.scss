@@ -348,3 +348,43 @@ a {
         padding: var(--spacing-2xl) 0;
     }
 }
+
+/* Domain Dropdown Menu Styles */
+.domain-menu.mat-mdc-menu-panel {
+    background: #12191F !important;
+    /* Absolute dark solid color, no transparency */
+    border: 1px solid rgba(116, 141, 146, 0.4) !important;
+    border-radius: 12px !important;
+    margin-top: 15px !important;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9) !important;
+    min-width: 220px !important;
+
+    .mat-mdc-menu-content {
+        padding: 8px !important;
+    }
+
+    .mat-mdc-menu-item {
+        color: var(--text-primary) !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease;
+        margin-bottom: 2px;
+        font-weight: 500 !important;
+
+        .mat-icon {
+            color: var(--primary-light) !important;
+            margin-right: 12px;
+            transition: color 0.2s ease;
+        }
+
+        &:hover,
+        &:focus {
+            background: rgba(18, 78, 102, 0.9) !important;
+            color: #ffffff !important;
+            transform: translateX(4px);
+
+            .mat-icon {
+                color: #ffffff !important;
+            }
+        }
+    }
+}
