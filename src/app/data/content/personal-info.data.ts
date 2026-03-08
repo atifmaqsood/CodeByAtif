@@ -2,14 +2,14 @@ import { PersonalInfo } from '../models/portfolio.model';
 
 export const PERSONAL_INFO: PersonalInfo = {
     name: 'Atif Maqsood',
-    role: 'Full Stack Developer | Angular Specialist | MEAN & MERN | Micro Frontends Architect',
-    location: 'Lahore, Pakistan',
+    role: 'Full Stack Software Engineer | Angular, React & NestJS | Micro Frontends | AI-Assisted Development',
+    location: 'Lahore, Punjab, Pakistan',
     email: 'atifmaqsood907@gmail.com',
-    phone: ['+92 302 7259490', '+92 319 4310355'],
-    linkedin: 'https://www.linkedin.com/in/atifmaqsood-788002228',
-    bio: `I'm a Full Stack Developer with 3+ years of professional experience, specializing in modern frontend development using Angular, React.js, and Node.js. I've built scalable and modular applications using micro front-end architecture, Webpack Module Federation, cross-app authentication systems, and custom dev-server tooling.
+    phone: ['+92 302 7259490'],
+    linkedin: 'https://www.linkedin.com/in/atif-maqsood-788002228/',
+    bio: `Full Stack Software Engineer with 3+ years of experience building scalable enterprise and SaaS web applications using Angular, React.js, Node.js, and NestJS across MEAN and MERN stacks. Experienced in micro-frontend architecture, REST API integrations, middleware systems, and TypeScript-based development.
 
-My expertise includes Angular (v12–20), Angular Material, PrimeNG, TypeScript, RxJS, State Management, SCSS, Tailwind, Responsive UI Engineering, Micro Frontends, Module Federation, React.js, Next.js, Vue.js, Node.js, Express, Nest.js, Prisma, MongoDB, MySQL, MEAN & MERN full-stack systems, and integrations with third-party APIs.
+Proven track record of delivering high-performance, modular, and maintainable applications in Agile/Scrum environments, contributing to enterprise platforms across manufacturing, security, and healthcare domains.
 
-I focus on clean architecture, reusable UI patterns, modern animations, performance, and building experiences that feel premium.`
+I actively leverage AI-assisted development and modern "vibe coding" workflows to accelerate development cycles, improve code quality, and stay competitive in the rapidly evolving AI-driven software engineering landscape.`
 };

@@ -40,9 +40,9 @@
 
                 &:focus {
                     outline: none;
-                    background: rgba(255, 255, 255, 0.1);
-                    border-color: var(--primary);
-                    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+                    background: rgba(18, 78, 102, 0.12);
+                    border-color: var(--primary-light);
+                    box-shadow: 0 0 0 4px rgba(18, 78, 102, 0.15);
                 }
 
                 &::placeholder {
@@ -75,9 +75,9 @@
 
                 &.active {
                     background: var(--primary);
-                    color: white;
+                    color: var(--text-primary);
                     border-color: var(--primary);
-                    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+                    box-shadow: 0 4px 12px rgba(18, 78, 102, 0.4);
                 }
             }
         }

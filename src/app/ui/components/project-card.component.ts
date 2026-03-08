@@ -81,22 +81,22 @@ import { Project } from '../../data/models/portfolio.model';
     }
     
     .circle-1 {
-      width: 200px; /* Reduced size */
+      width: 200px;
       height: 200px;
-      background: radial-gradient(circle at center, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+      background: radial-gradient(circle at center, rgba(18, 78, 102, 0.45) 0%, transparent 70%);
       top: -40px;
       left: -40px;
-      filter: blur(20px); /* Reduced blur */
+      filter: blur(20px);
       animation-delay: 0s;
     }
     
     .circle-2 {
-      width: 180px; /* Reduced size */
+      width: 180px;
       height: 180px;
-      background: radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, transparent 70%);
+      background: radial-gradient(circle at center, rgba(116, 141, 146, 0.35) 0%, transparent 70%);
       bottom: -40px;
       right: -40px;
-      filter: blur(20px); /* Reduced blur */
+      filter: blur(20px);
       animation-delay: 2s;
     }
     
@@ -159,17 +159,17 @@ import { Project } from '../../data/models/portfolio.model';
       
       &:hover {
         transform: translateY(-16px) scale(1.02);
-        border-color: rgba(99, 102, 241, 0.5);
+        border-color: rgba(18, 78, 102, 0.55);
         background: linear-gradient(
           135deg,
-          rgba(255, 255, 255, 0.15) 0%,
-          rgba(255, 255, 255, 0.08) 100%
+          rgba(18, 78, 102, 0.18) 0%,
+          rgba(116, 141, 146, 0.1) 100%
         );
         box-shadow: 
-          0 24px 64px 0 rgba(99, 102, 241, 0.4),
-          0 8px 24px 0 rgba(99, 102, 241, 0.2),
-          0 0 0 1px rgba(99, 102, 241, 0.3),
-          inset 0 1px 2px 0 rgba(255, 255, 255, 0.3),
+          0 24px 64px 0 rgba(18, 78, 102, 0.4),
+          0 8px 24px 0 rgba(18, 78, 102, 0.2),
+          0 0 0 1px rgba(18, 78, 102, 0.3),
+          inset 0 1px 2px 0 rgba(255, 255, 255, 0.2),
           inset 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
           
         .card-shine {
@@ -179,9 +179,9 @@ import { Project } from '../../data/models/portfolio.model';
         
         &.featured {
           box-shadow: 
-            0 28px 72px 0 rgba(99, 102, 241, 0.6),
-            0 12px 32px 0 rgba(236, 72, 153, 0.3),
-            0 0 0 2px rgba(99, 102, 241, 0.4),
+            0 28px 72px 0 rgba(18, 78, 102, 0.6),
+            0 12px 32px 0 rgba(116, 141, 146, 0.3),
+            0 0 0 2px rgba(18, 78, 102, 0.45),
             inset 0 1px 2px 0 rgba(255, 255, 255, 0.3);
         }
       }
@@ -189,15 +189,15 @@ import { Project } from '../../data/models/portfolio.model';
       &.featured {
         background: linear-gradient(
           135deg,
-          rgba(99, 102, 241, 0.15) 0%,
-          rgba(236, 72, 153, 0.08) 50%,
-          rgba(139, 92, 246, 0.12) 100%
+          rgba(18, 78, 102, 0.2) 0%,
+          rgba(116, 141, 146, 0.1) 50%,
+          rgba(18, 102, 128, 0.15) 100%
         );
-        border: 2px solid rgba(99, 102, 241, 0.6);
+        border: 2px solid rgba(18, 78, 102, 0.55);
         box-shadow: 
-          0 12px 48px 0 rgba(99, 102, 241, 0.35),
-          0 4px 16px 0 rgba(99, 102, 241, 0.2),
-          0 0 0 1px rgba(99, 102, 241, 0.3),
+          0 12px 48px 0 rgba(18, 78, 102, 0.4),
+          0 4px 16px 0 rgba(18, 78, 102, 0.2),
+          0 0 0 1px rgba(18, 78, 102, 0.3),
           inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
       }
     }
@@ -231,17 +231,17 @@ import { Project } from '../../data/models/portfolio.model';
       gap: 0.65rem;
       padding: 0.85rem 1.5rem;
       background: linear-gradient(135deg, 
-        rgba(99, 102, 241, 0.95) 0%, 
-        rgba(139, 92, 246, 0.95) 100%
+        rgba(18, 78, 102, 0.92) 0%, 
+        rgba(26, 102, 128, 0.92) 100%
       );
-      color: white;
+      color: var(--text-primary);
       font-size: 0.875rem;
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
       box-shadow: 
-        0 4px 16px rgba(99, 102, 241, 0.4),
-        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        0 4px 16px rgba(18, 78, 102, 0.45),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
       z-index: 2;
       
       mat-icon {
@@ -273,10 +273,10 @@ import { Project } from '../../data/models/portfolio.model';
       font-size: 2rem;
       font-weight: 900;
       margin-bottom: 0;
-      color: #ffffff;
+      color: var(--text-primary);
       text-shadow: 
         0 2px 8px rgba(0, 0, 0, 0.4),
-        0 0 20px rgba(99, 102, 241, 0.3);
+        0 0 20px rgba(18, 78, 102, 0.35);
       letter-spacing: -0.5px;
       line-height: 1.2;
       
@@ -292,7 +292,7 @@ import { Project } from '../../data/models/portfolio.model';
       z-index: 2;
       
       .description {
-        color: rgba(255, 255, 255, 0.92);
+        color: var(--text-secondary);
         margin-bottom: 1.75rem;
         line-height: 1.75;
         font-size: 1rem;
@@ -310,28 +310,28 @@ import { Project } from '../../data/models/portfolio.model';
         mat-chip {
           background: linear-gradient(
             135deg,
-            rgba(99, 102, 241, 0.3) 0%,
-            rgba(139, 92, 246, 0.25) 100%
+            rgba(18, 78, 102, 0.3) 0%,
+            rgba(116, 141, 146, 0.2) 100%
           );
-          color: rgba(255, 255, 255, 0.98);
-          border: 1.5px solid rgba(99, 102, 241, 0.5);
+          color: var(--text-primary);
+          border: 1.5px solid rgba(18, 78, 102, 0.5);
           font-weight: 700;
           font-size: 0.85rem;
           backdrop-filter: blur(10px);
           box-shadow: 
-            0 2px 8px rgba(99, 102, 241, 0.25),
-            inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            0 2px 8px rgba(18, 78, 102, 0.25),
+            inset 0 1px 1px rgba(255, 255, 255, 0.1);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           
           &:hover {
             background: linear-gradient(
               135deg,
-              rgba(99, 102, 241, 0.45) 0%,
-              rgba(139, 92, 246, 0.4) 100%
+              rgba(18, 78, 102, 0.45) 0%,
+              rgba(116, 141, 146, 0.35) 100%
             );
-            border-color: rgba(99, 102, 241, 0.7);
+            border-color: rgba(18, 78, 102, 0.7);
             transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 4px 12px rgba(18, 78, 102, 0.4);
           }
         }
       }
@@ -359,29 +359,29 @@ import { Project } from '../../data/models/portfolio.model';
           padding: 0.5rem 1rem;
           background: linear-gradient(
             135deg,
-            rgba(139, 92, 246, 0.3) 0%,
-            rgba(236, 72, 153, 0.2) 100%
+            rgba(116, 141, 146, 0.25) 0%,
+            rgba(18, 78, 102, 0.2) 100%
           );
-          border: 1.5px solid rgba(139, 92, 246, 0.5);
+          border: 1.5px solid rgba(116, 141, 146, 0.4);
           border-radius: 20px;
-          color: rgba(220, 200, 255, 1);
+          color: var(--text-primary);
           font-weight: 700;
           backdrop-filter: blur(10px);
           box-shadow: 
-            0 2px 8px rgba(139, 92, 246, 0.25),
-            inset 0 1px 1px rgba(255, 255, 255, 0.15);
+            0 2px 8px rgba(116, 141, 146, 0.2),
+            inset 0 1px 1px rgba(255, 255, 255, 0.1);
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           
           &:hover {
             background: linear-gradient(
               135deg,
-              rgba(139, 92, 246, 0.45) 0%,
-              rgba(236, 72, 153, 0.35) 100%
+              rgba(116, 141, 146, 0.4) 0%,
+              rgba(18, 78, 102, 0.35) 100%
             );
-            border-color: rgba(139, 92, 246, 0.7);
+            border-color: rgba(116, 141, 146, 0.65);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 5px 15px rgba(116, 141, 146, 0.35);
           }
           
           @media (max-width: 768px) {
@@ -419,12 +419,12 @@ import { Project } from '../../data/models/portfolio.model';
         
         &[mat-raised-button] {
           box-shadow: 
-            0 4px 12px rgba(99, 102, 241, 0.4),
-            inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            0 4px 12px rgba(18, 78, 102, 0.45),
+            inset 0 1px 1px rgba(255, 255, 255, 0.15);
             
           &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 8px 20px rgba(18, 78, 102, 0.55);
           }
         }
         
@@ -435,11 +435,11 @@ import { Project } from '../../data/models/portfolio.model';
           background: rgba(255, 255, 255, 0.05);
           
           &:hover {
-            border-color: var(--primary);
-            background: rgba(99, 102, 241, 0.15);
-            color: #fff;
+            border-color: var(--primary-light);
+            background: rgba(18, 78, 102, 0.18);
+            color: var(--text-primary);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 4px 12px rgba(18, 78, 102, 0.35);
           }
         }
       }

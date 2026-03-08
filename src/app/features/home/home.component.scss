@@ -59,7 +59,7 @@
         .image-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(45deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2));
+            background: linear-gradient(45deg, rgba(18, 78, 102, 0.25), rgba(116, 141, 146, 0.2));
             pointer-events: none;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             animation: morph 8s ease-in-out infinite;
@@ -97,9 +97,9 @@
         margin-bottom: 0.5rem;
         display: inline-block;
         padding: 0.5rem 1rem;
-        background: rgba(99, 102, 241, 0.1);
+        background: rgba(18, 78, 102, 0.15);
         border-radius: 2rem;
-        border: 1px solid rgba(99, 102, 241, 0.2);
+        border: 1px solid rgba(18, 78, 102, 0.3);
     }
 
     .hero-title {
@@ -270,7 +270,7 @@
 /* Skills Highlight Section */
 .skills-highlight-section {
     padding: 100px 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+    background: linear-gradient(to bottom, rgba(18, 78, 102, 0.08), transparent);
 
     .section-header {
         text-align: center;
@@ -307,8 +307,8 @@
 
         &:hover {
             transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(99, 102, 241, 0.4);
+            background: rgba(18, 78, 102, 0.08);
+            border-color: rgba(18, 78, 102, 0.5);
         }
 
         .skill-icon {
@@ -389,7 +389,7 @@
         &:hover {
             transform: translateY(-10px);
             background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(139, 92, 246, 0.4);
+            border-color: rgba(18, 78, 102, 0.5);
 
             .service-icon-wrapper {
                 background: var(--gradient-primary);
@@ -408,7 +408,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(18, 78, 102, 0.12);
             transition: all 0.3s ease;
 
             .service-icon {
@@ -436,7 +436,7 @@
 /* Experience Timeline Section */
 .experience-section {
     padding: 100px 0;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to bottom, transparent, rgba(18, 78, 102, 0.06));
 
     .section-header {
         text-align: center;
@@ -487,8 +487,8 @@
         &:hover {
             transform: translateX(10px);
             background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(99, 102, 241, 0.4);
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
+            border-color: rgba(18, 78, 102, 0.45);
+            box-shadow: 0 10px 40px rgba(18, 78, 102, 0.25);
 
             &::before {
                 opacity: 1;
@@ -514,7 +514,7 @@
                 height: 70px;
                 min-width: 70px;
                 border-radius: 1rem;
-                background: rgba(99, 102, 241, 0.1);
+                background: rgba(18, 78, 102, 0.12);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -611,8 +611,8 @@
 
             .tech-badge {
                 padding: 0.5rem 1rem;
-                background: rgba(99, 102, 241, 0.1);
-                border: 1px solid rgba(99, 102, 241, 0.3);
+                background: rgba(18, 78, 102, 0.12);
+                border: 1px solid rgba(18, 78, 102, 0.3);
                 border-radius: 2rem;
                 font-size: 0.85rem;
                 font-weight: 600;
@@ -620,8 +620,8 @@
                 transition: all 0.3s ease;
 
                 &:hover {
-                    background: rgba(99, 102, 241, 0.2);
-                    border-color: var(--primary);
+                    background: rgba(18, 78, 102, 0.22);
+                    border-color: var(--primary-light);
                     transform: translateY(-2px);
                 }
             }
@@ -717,7 +717,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(18, 78, 102, 0.12) 0%, transparent 70%);
             z-index: -1;
         }
 

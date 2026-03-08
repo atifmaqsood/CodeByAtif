@@ -8,29 +8,34 @@ export const EXPERIENCES: Experience[] = [
         location: 'Lahore, Punjab, Pakistan',
         startDate: '2024-11',
         endDate: 'Present',
-        description: 'Working on enterprise-level applications using Angular, React, and Node.js, integrating Prisma ORM, and implementing micro front-end solutions for modular scalability.',
+        description: 'Developing and maintaining enterprise-scale SaaS applications using Angular, React, Node.js, and NestJS in a micro-frontend architecture.',
         responsibilities: [
-            'Architected and implemented micro-frontend architecture',
-            'Integrated Prisma ORM for efficient database management',
-            'Developed scalable web applications using Angular, React, and Node.js',
-            'Mentored junior developers and conducted code reviews'
+            'Designed and implemented micro-frontend architecture to consolidate multiple Angular applications into a scalable modular system',
+            'Built middleware integrations using NestJS to connect third-party services such as Bill.com and Gusto Payroll using webhooks and REST APIs',
+            'Developed a desktop middleware solution using ElectronJS to process industrial OPC tag data and synchronize machine telemetry to MQTT, PostgreSQL, SQL Server, and SQLite databases',
+            'Optimized application performance by implementing modular components, reusable services, and efficient state management',
+            'Participated in Agile/Scrum sprint planning, code reviews, and feature delivery, ensuring timely completion of development tasks',
+            'Collaborated with cross-functional teams including backend engineers, QA teams, and product managers to deliver high-quality enterprise solutions',
+            'Leveraged AI-assisted development and modern vibe coding workflows to accelerate feature implementation and improve productivity'
         ],
-        technologies: ['Angular', 'React', 'Node.js', 'Prisma ORM', 'Micro Frontends', 'TypeScript']
+        technologies: ['Angular', 'React', 'Node.js', 'NestJS', 'ElectronJS', 'MQTT', 'Micro Frontends', 'PostgreSQL', 'SQL Server', 'SQLite', 'Prisma ORM', 'TypeScript', 'Agile/Scrum']
     },
     {
         id: '2',
-        company: 'esoftbay',
+        company: 'eSoftbay',
         position: 'Angular Developer',
         location: 'Lahore, Punjab, Pakistan',
         startDate: '2024-06',
         endDate: '2024-11',
-        description: 'Specialized in Angular development for client projects.',
+        description: 'Migrated legacy ASP.NET WebForms modules into a modern Angular-based application for a hospital management system.',
         responsibilities: [
-            'Developed and maintained Angular applications',
-            'Implemented responsive UI designs',
-            'Collaborated with cross-functional teams'
+            'Developed modular Angular components, services, and reusable UI modules to improve maintainability and scalability',
+            'Integrated backend REST APIs for patient management, appointment scheduling, and hospital administration workflows',
+            'Implemented responsive UI/UX using Angular Material, Bootstrap, and SCSS to enhance usability across devices',
+            'Optimized front-end performance through code refactoring, lazy loading modules, and component reusability',
+            'Worked closely with backend teams to ensure seamless API communication and data consistency'
         ],
-        technologies: ['Angular', 'TypeScript', 'RxJS', 'SCSS']
+        technologies: ['Angular', 'Angular Material', 'Bootstrap', 'SCSS', 'TypeScript', 'RxJS', 'REST APIs']
     },
     {
         id: '3',
@@ -39,42 +44,14 @@ export const EXPERIENCES: Experience[] = [
         location: 'Lahore, Punjab, Pakistan',
         startDate: '2023-05',
         endDate: '2024-06',
-        description: 'Angular development and UI implementation.',
+        description: 'Contributed to the development of Zappiex Security Management System using Angular.',
         responsibilities: [
-            'Built responsive web interfaces',
-            'Integrated RESTful APIs',
-            'Optimized application performance'
+            'Designed and implemented interactive dashboards, data tables, and UI components for security monitoring and management',
+            'Implemented business logic and user workflows aligned with security management requirements and system operations',
+            'Integrated REST APIs and authentication mechanisms to support role-based system access',
+            'Collaborated with Agile teams during sprint planning, daily standups, and feature delivery cycles',
+            'Improved UI performance and code maintainability through component modularization and TypeScript best practices'
         ],
-        technologies: ['Angular', 'TypeScript', 'Angular Material']
+        technologies: ['Angular', 'TypeScript', 'Angular Material', 'REST APIs', 'Agile/Scrum']
     },
-    {
-        id: '4',
-        company: 'Contour Software',
-        position: 'Trainee Software Engineer',
-        location: 'Lahore, Punjab, Pakistan',
-        startDate: '2022-12',
-        endDate: '2023-03',
-        description: 'Trainee role focusing on software engineering fundamentals.',
-        responsibilities: [
-            'Assisted in development tasks',
-            'Learned and applied software engineering best practices',
-            'Participated in team meetings and training sessions'
-        ],
-        technologies: ['JavaScript', 'HTML', 'CSS']
-    },
-    {
-        id: '5',
-        company: 'eFAIDA (Pvt.) Limited',
-        position: 'Frontend Developer',
-        location: 'Okara',
-        startDate: '2022-06',
-        endDate: '2022-11',
-        description: 'Delivered responsive web interfaces using Bootstrap.',
-        responsibilities: [
-            'Developed responsive web interfaces using Bootstrap',
-            'Contributed to end-to-end project execution',
-            'Ensured cross-browser compatibility'
-        ],
-        technologies: ['Bootstrap', 'HTML', 'CSS', 'JavaScript']
-    }
 ];

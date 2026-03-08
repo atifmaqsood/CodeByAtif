@@ -33,15 +33,15 @@ import { CommonModule } from '@angular/common';
       height: 100vh;
       overflow: hidden;
       z-index: -1;
-      background: linear-gradient(135deg, #0a0a0f 0%, #13131a 50%, #1a1a24 100%);
+      background: linear-gradient(135deg, #212A31 0%, #2E3944 50%, #263140 100%);
     }
     
     .shape {
       position: absolute;
       opacity: 0.15;
-      background: rgba(102, 126, 234, 0.1);
+      background: rgba(18, 78, 102, 0.08);
       backdrop-filter: blur(2px);
-      border: 1px solid rgba(102, 126, 234, 0.2);
+      border: 1px solid rgba(116, 141, 146, 0.15);
     }
     
     /* Circles */
@@ -54,7 +54,7 @@ import { CommonModule } from '@angular/common';
       height: 400px;
       top: -100px;
       right: -100px;
-      background: rgba(102, 126, 234, 0.08);
+      background: rgba(18, 78, 102, 0.1);
       animation: float 20s ease-in-out infinite, rotate 30s linear infinite;
     }
     
@@ -63,7 +63,7 @@ import { CommonModule } from '@angular/common';
       height: 250px;
       bottom: 10%;
       left: 5%;
-      background: rgba(236, 72, 153, 0.08);
+      background: rgba(116, 141, 146, 0.08);
       animation: float 15s ease-in-out infinite reverse, rotate 25s linear infinite;
       animation-delay: -5s;
     }
@@ -73,7 +73,7 @@ import { CommonModule } from '@angular/common';
       height: 180px;
       top: 50%;
       right: 20%;
-      background: rgba(139, 92, 246, 0.08);
+      background: rgba(46, 57, 68, 0.12);
       animation: float 18s ease-in-out infinite;
       animation-delay: -10s;
     }
@@ -88,7 +88,7 @@ import { CommonModule } from '@angular/common';
       height: 200px;
       top: 20%;
       left: 10%;
-      background: rgba(79, 172, 254, 0.06);
+      background: rgba(18, 78, 102, 0.07);
       animation: float 22s ease-in-out infinite, rotateSmall 40s linear infinite;
       animation-delay: -3s;
       transform: rotate(25deg);
@@ -99,7 +99,7 @@ import { CommonModule } from '@angular/common';
       height: 150px;
       bottom: 20%;
       right: 15%;
-      background: rgba(245, 87, 108, 0.06);
+      background: rgba(116, 141, 146, 0.06);
       animation: float 19s ease-in-out infinite reverse, rotateSmall 35s linear infinite reverse;
       animation-delay: -7s;
       transform: rotate(-15deg);
@@ -115,7 +115,7 @@ import { CommonModule } from '@angular/common';
     }
     
     .triangle-1 {
-      border-bottom: 173px solid rgba(16, 185, 129, 0.08);
+      border-bottom: 173px solid rgba(45, 158, 120, 0.07);
       top: 15%;
       right: 30%;
       animation: float 17s ease-in-out infinite, rotate 45s linear infinite;
@@ -123,7 +123,7 @@ import { CommonModule } from '@angular/common';
     }
     
     .triangle-2 {
-      border-bottom: 120px solid rgba(245, 158, 11, 0.08);
+      border-bottom: 120px solid rgba(201, 148, 58, 0.07);
       bottom: 30%;
       left: 25%;
       animation: float 21s ease-in-out infinite reverse, rotate 50s linear infinite reverse;
@@ -142,7 +142,7 @@ import { CommonModule } from '@angular/common';
     .orb-1 {
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(18, 78, 102, 0.35) 0%, transparent 70%);
       top: -200px;
       left: -200px;
       animation-delay: 0s;
@@ -151,7 +151,7 @@ import { CommonModule } from '@angular/common';
     .orb-2 {
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(236, 72, 153, 0.25) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(116, 141, 146, 0.22) 0%, transparent 70%);
       bottom: -150px;
       right: -150px;
       animation-delay: -4s;
@@ -160,7 +160,7 @@ import { CommonModule } from '@angular/common';
     .orb-3 {
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(46, 57, 68, 0.3) 0%, transparent 70%);
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -175,8 +175,8 @@ import { CommonModule } from '@angular/common';
       width: 100%;
       height: 100%;
       background-image: 
-        linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(18, 78, 102, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 78, 102, 0.04) 1px, transparent 1px);
       background-size: 50px 50px;
       opacity: 0.5;
     }

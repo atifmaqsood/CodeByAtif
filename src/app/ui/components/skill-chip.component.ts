@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-skill-chip',
-    imports: [CommonModule],
-    template: `
+  selector: 'app-skill-chip',
+  imports: [CommonModule],
+  template: `
     <div class="skill-chip" [class]="'level-' + level">
       <span class="skill-name">{{ name }}</span>
       <div class="skill-level-indicator">
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
       </div>
     </div>
   `,
-    styles: [`
+  styles: [`
     .skill-chip {
       display: inline-flex;
       flex-direction: column;
@@ -36,8 +36,8 @@ import { CommonModule } from '@angular/common';
       }
       
       &.level-advanced {
-        background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(79, 70, 229, 0.1));
-        border-color: rgba(99, 102, 241, 0.3);
+        background: linear-gradient(135deg, rgba(18, 78, 102, 0.15), rgba(116, 141, 146, 0.1));
+        border-color: rgba(18, 78, 102, 0.35);
       }
       
       &.level-intermediate {
@@ -56,7 +56,7 @@ import { CommonModule } from '@angular/common';
     .skill-level-indicator {
       width: 100%;
       height: 4px;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.15);
       border-radius: 2px;
       overflow: hidden;
       
@@ -69,11 +69,11 @@ import { CommonModule } from '@angular/common';
     }
     
     .level-expert .level-fill {
-      background: linear-gradient(90deg, #10b981, #059669);
+      background: linear-gradient(90deg, #2d9e78, #25855a);
     }
     
     .level-advanced .level-fill {
-      background: linear-gradient(90deg, #6366f1, #4f46e5);
+      background: linear-gradient(90deg, #124E66, #1a6680);
     }
     
     .level-intermediate .level-fill {
@@ -86,16 +86,16 @@ import { CommonModule } from '@angular/common';
   `]
 })
 export class SkillChipComponent {
-    @Input() name: string = '';
-    @Input() level: 'beginner' | 'intermediate' | 'advanced' | 'expert' = 'intermediate';
+  @Input() name: string = '';
+  @Input() level: 'beginner' | 'intermediate' | 'advanced' | 'expert' = 'intermediate';
 
-    getLevelPercentage(): number {
-        const levels = {
-            beginner: 25,
-            intermediate: 50,
-            advanced: 75,
-            expert: 100
-        };
-        return levels[this.level];
-    }
+  getLevelPercentage(): number {
+    const levels = {
+      beginner: 25,
+      intermediate: 50,
+      advanced: 75,
+      expert: 100
+    };
+    return levels[this.level];
+  }
 }

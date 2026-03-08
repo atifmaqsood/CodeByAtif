@@ -96,14 +96,14 @@ import { Experience } from '../../data/models/portfolio.model';
         border-radius: 50%;
         background: var(--gradient-primary);
         border: 4px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+        box-shadow: 0 0 0 4px rgba(18, 78, 102, 0.25);
         z-index: 1;
       }
       
       .marker-line {
         width: 2px;
         flex: 1;
-        background: linear-gradient(to bottom, rgba(99, 102, 241, 0.5), transparent);
+        background: linear-gradient(to bottom, rgba(18, 78, 102, 0.6), transparent);
         margin-top: 8px;
       }
     }
@@ -119,14 +119,14 @@ import { Experience } from '../../data/models/portfolio.model';
         transition: all var(--transition-base);
         
         &:hover {
-          background: rgba(255, 255, 255, 0.08);
-          border-color: rgba(99, 102, 241, 0.3);
-          box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+          background: rgba(18, 78, 102, 0.08);
+          border-color: rgba(18, 78, 102, 0.35);
+          box-shadow: 0 8px 25px rgba(18, 78, 102, 0.22);
         }
 
         &.mat-expanded {
-          background: rgba(255, 255, 255, 0.08);
-          border-color: rgba(99, 102, 241, 0.4);
+          background: rgba(18, 78, 102, 0.1);
+          border-color: rgba(18, 78, 102, 0.4);
         }
       }
       
@@ -156,7 +156,7 @@ import { Experience } from '../../data/models/portfolio.model';
       h3 {
         font-size: 1.25rem;
         font-weight: 700;
-        color: white;
+        color: var(--text-primary);
         margin-bottom: 0.25rem;
       }
       
@@ -170,8 +170,8 @@ import { Experience } from '../../data/models/portfolio.model';
     
     .date-badge {
       padding: 0.5rem 1rem;
-      background: rgba(99, 102, 241, 0.15);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      background: rgba(18, 78, 102, 0.15);
+      border: 1px solid rgba(18, 78, 102, 0.3);
       border-radius: var(--radius-sm);
       font-size: 0.875rem;
       font-weight: 600;
@@ -198,7 +198,7 @@ import { Experience } from '../../data/models/portfolio.model';
       }
       
       .description {
-        color: rgba(255, 255, 255, 0.8);
+        color: var(--text-secondary);
         margin-bottom: var(--spacing-md);
         line-height: 1.6;
       }
@@ -210,7 +210,7 @@ import { Experience } from '../../data/models/portfolio.model';
           font-size: 1rem;
           font-weight: 600;
           margin-bottom: var(--spacing-sm);
-          color: white;
+          color: var(--text-primary);
         }
         
         ul {
@@ -221,7 +221,7 @@ import { Experience } from '../../data/models/portfolio.model';
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
             
             &::before {
               content: '→';
@@ -239,7 +239,7 @@ import { Experience } from '../../data/models/portfolio.model';
           font-size: 1rem;
           font-weight: 600;
           margin-bottom: var(--spacing-sm);
-          color: white;
+          color: var(--text-primary);
         }
         
         .tech-list {
@@ -250,8 +250,8 @@ import { Experience } from '../../data/models/portfolio.model';
         
         .tech-badge {
           padding: 0.25rem 0.75rem;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(217, 70, 239, 0.15));
-          border: 1px solid rgba(99, 102, 241, 0.3);
+          background: linear-gradient(135deg, rgba(18, 78, 102, 0.2), rgba(116, 141, 146, 0.15));
+          border: 1px solid rgba(18, 78, 102, 0.3);
           border-radius: var(--radius-sm);
           font-size: 0.75rem;
           font-weight: 500;

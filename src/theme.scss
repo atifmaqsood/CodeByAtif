@@ -3,24 +3,24 @@
 // Include the common styles for Angular Material
 @include mat.core();
 
-// Define custom color palettes with modern soft gradients
+// ── New Palette: Deep Teal (#124E66) as primary ──────────────────────────
 $primary-palette: (
-  50: #e3f2fd,
-  100: #bbdefb,
-  200: #90caf9,
-  300: #64b5f6,
-  400: #42a5f5,
-  500: #6366f1,
-  // Indigo-500
-  600: #5c61ea,
-  700: #5558e3,
-  800: #4e50dc,
-  900: #4142d4,
+  50: #e3f0f5,
+  100: #b9d9e6,
+  200: #8bbfd5,
+  300: #5ca5c4,
+  400: #3992b8,
+  500: #124E66,
+  // Main brand teal
+  600: #0f455b,
+  700: #0b3a4e,
+  800: #083041,
+  900: #042233,
   contrast: (50: rgba(black, 0.87),
     100: rgba(black, 0.87),
     200: rgba(black, 0.87),
     300: rgba(black, 0.87),
-    400: rgba(black, 0.87),
+    400: white,
     500: white,
     600: white,
     700: white,
@@ -29,18 +29,19 @@ $primary-palette: (
   )
 );
 
+// ── Accent Palette: Muted Steel (#748D92) ────────────────────────────────
 $accent-palette: (
-  50: #fce4ec,
-  100: #f8bbd0,
-  200: #f48fb1,
-  300: #f06292,
-  400: #ec4899,
-  500: #d946ef,
-  // Pink-500
-  600: #c026d3,
-  700: #a21caf,
-  800: #86198f,
-  900: #701a75,
+  50: #f0f4f5,
+  100: #d9e3e5,
+  200: #c0d1d4,
+  300: #a6bec2,
+  400: #92adb2,
+  500: #748D92,
+  // Muted steel blue
+  600: #6a8187,
+  700: #5d7278,
+  800: #506468,
+  900: #3b4d51,
   contrast: (50: rgba(black, 0.87),
     100: rgba(black, 0.87),
     200: rgba(black, 0.87),

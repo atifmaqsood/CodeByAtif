@@ -29,30 +29,30 @@ export class HomeComponent {
     highlightedSkills = [
         { name: 'Angular', icon: 'apps', level: 95 },
         { name: 'React', icon: 'web', level: 85 },
-        { name: 'Vue.js', icon: 'view_quilt', level: 80 },
-        { name: 'Node.js', icon: 'dns', level: 85 }
+        { name: 'NestJS', icon: 'dns', level: 88 },
+        { name: 'Node.js', icon: 'cloud', level: 88 }
     ];
 
     services = [
         {
             icon: 'web',
             title: 'Web Development',
-            description: 'Building responsive and scalable web applications using modern frameworks like Angular and React.'
-        },
-        {
-            icon: 'storage',
-            title: 'Backend Development',
-            description: 'Creating robust APIs and server-side logic with Node.js, Express, and database management.'
+            description: 'Building scalable enterprise and SaaS applications using Angular, React, Node.js, and NestJS across MEAN and MERN stacks.'
         },
         {
             icon: 'architecture',
-            title: 'System Architecture',
-            description: 'Designing micro frontends and scalable architectures using Module Federation and best practices.'
+            title: 'Micro-Frontend Architecture',
+            description: 'Designing and implementing micro-frontend systems using Webpack Module Federation for modular, scalable enterprise deployment.'
         },
         {
-            icon: 'speed',
-            title: 'Performance Optimization',
-            description: 'Optimizing application performance, bundle size, and improving user experience.'
+            icon: 'integration_instructions',
+            title: 'Middleware & API Integrations',
+            description: 'Building middleware systems using NestJS to connect third-party services like Bill.com and Gusto via webhooks and REST APIs.'
+        },
+        {
+            icon: 'smart_toy',
+            title: 'AI-Assisted Development',
+            description: 'Leveraging modern vibe coding and agentic AI workflows (Cursor, GitHub Copilot, Antigravity) to accelerate delivery and improve code quality.'
         }
     ];
 
@@ -62,39 +62,39 @@ export class HomeComponent {
             role: 'Full Stack Developer',
             period: 'Nov 2024 - Present',
             logo: 'business',
-            description: 'Working on enterprise-level applications using Angular, React, and Node.js, integrating Prisma ORM, and implementing micro front-end solutions.',
+            description: 'Developing enterprise-scale SaaS applications using Angular, React, Node.js, and NestJS in a micro-frontend architecture.',
             achievements: [
-                'Architected micro-frontend solutions',
-                'Integrated Prisma ORM for database management',
-                'Developed scalable enterprise applications'
+                'Designed and implemented micro-frontend architecture with module federation',
+                'Built NestJS middleware integrations for Bill.com and Gusto Payroll',
+                'Developed ElectronJS desktop app for industrial OPC tag data processing'
             ],
-            technologies: ['Angular', 'React', 'Node.js', 'Prisma ORM']
+            technologies: ['Angular', 'React', 'NestJS', 'ElectronJS', 'MQTT', 'Micro Frontends']
         },
         {
-            company: 'esoftbay',
+            company: 'eSoftbay',
             role: 'Angular Developer',
             period: 'Jun 2024 - Nov 2024',
             logo: 'code',
-            description: 'Specialized in Angular development, delivering high-quality client projects.',
+            description: 'Migrated legacy ASP.NET WebForms modules into a modern Angular-based hospital management system.',
             achievements: [
-                'Developed robust Angular applications',
-                'Implemented responsive UI designs',
-                'Optimized frontend performance'
+                'Migrated hospital management system from ASP.NET WebForms to Angular',
+                'Integrated REST APIs for patient management and appointment scheduling',
+                'Implemented responsive UI using Angular Material and Bootstrap'
             ],
-            technologies: ['Angular', 'TypeScript', 'RxJS']
+            technologies: ['Angular', 'TypeScript', 'Angular Material', 'Bootstrap', 'SCSS']
         },
         {
             company: 'Codeteck',
             role: 'Angular Developer',
             period: 'May 2023 - Jun 2024',
             logo: 'developer_mode',
-            description: 'Focused on Angular development and UI/UX implementation for various web applications.',
+            description: 'Contributed to the Zappiex Security Management System, building interactive dashboards and integrating REST APIs.',
             achievements: [
-                'Built responsive web interfaces',
-                'Integrated RESTful APIs',
-                'Collaborated with design teams'
+                'Built interactive security monitoring dashboards and data tables',
+                'Integrated REST APIs and role-based authentication',
+                'Improved UI performance through component modularization'
             ],
-            technologies: ['Angular', 'Angular Material', 'TypeScript']
+            technologies: ['Angular', 'Angular Material', 'TypeScript', 'REST APIs']
         }
     ];
 }

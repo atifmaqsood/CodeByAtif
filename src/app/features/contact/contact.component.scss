@@ -51,8 +51,8 @@
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
-                background: rgba(99, 102, 241, 0.1);
-                color: var(--primary);
+                background: rgba(18, 78, 102, 0.12);
+                color: var(--primary-light);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -156,12 +156,12 @@
             }
 
             ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-                color: var(--primary) !important;
+                color: var(--primary-light) !important;
             }
 
             ::ng-deep .mat-input-element {
-                caret-color: var(--primary);
-                color: #fff !important;
+                caret-color: var(--primary-light);
+                color: #D3D9D4 !important;
             }
 
             ::ng-deep .mat-input-element::placeholder {

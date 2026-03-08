@@ -7,40 +7,38 @@ export const SKILLS: Skill[] = [
     { name: 'JavaScript', category: 'frontend', level: 'expert' },
     { name: 'React.js', category: 'frontend', level: 'advanced' },
     { name: 'Next.js', category: 'frontend', level: 'advanced' },
-    { name: 'Vue.js', category: 'frontend', level: 'advanced' },
     { name: 'RxJS', category: 'frontend', level: 'expert' },
     { name: 'Angular Material', category: 'frontend', level: 'expert' },
     { name: 'PrimeNG', category: 'frontend', level: 'advanced' },
+    { name: 'Bootstrap', category: 'frontend', level: 'expert' },
     { name: 'SCSS/Sass', category: 'frontend', level: 'expert' },
     { name: 'Tailwind CSS', category: 'frontend', level: 'advanced' },
-    { name: 'HTML5/CSS3', category: 'frontend', level: 'expert' },
-    { name: 'Responsive Design', category: 'frontend', level: 'expert' },
     { name: 'Micro Frontends', category: 'frontend', level: 'expert' },
     { name: 'Module Federation', category: 'frontend', level: 'expert' },
 
-    // Backend
+    // Backend & Desktop
     { name: 'Node.js', category: 'backend', level: 'expert' },
+    { name: 'Nest.js', category: 'backend', level: 'expert' },
     { name: 'Express.js', category: 'backend', level: 'expert' },
-    { name: 'Nest.js', category: 'backend', level: 'advanced' },
+    { name: 'Electron.js', category: 'backend', level: 'advanced' },
+    { name: 'MQTT', category: 'backend', level: 'advanced' },
     { name: 'RESTful APIs', category: 'backend', level: 'expert' },
-    { name: 'GraphQL', category: 'backend', level: 'intermediate' },
-    { name: 'JWT Authentication', category: 'backend', level: 'expert' },
     { name: 'Prisma ORM', category: 'backend', level: 'advanced' },
+    { name: 'MEAN & MERN Stack', category: 'backend', level: 'expert' },
 
     // Database
     { name: 'MongoDB', category: 'database', level: 'expert' },
     { name: 'MySQL', category: 'database', level: 'advanced' },
     { name: 'SQL Server', category: 'database', level: 'advanced' },
     { name: 'PostgreSQL', category: 'database', level: 'intermediate' },
+    { name: 'SQLite', category: 'database', level: 'intermediate' },
 
-    // Tools & Others
-    { name: 'Git/GitHub', category: 'tools', level: 'expert' },
-    { name: 'Webpack', category: 'tools', level: 'advanced' },
-    { name: 'npm/yarn', category: 'tools', level: 'expert' },
-    { name: 'VS Code', category: 'tools', level: 'expert' },
+    // Modern Workflows & AI Tools
+    { name: 'Vibe Coding / Agentic Coding', category: 'tools', level: 'expert' },
+    { name: 'GitHub Copilot / Cursor AI / Antigravity', category: 'tools', level: 'expert' },
+    { name: 'Git/GitHub/GitLab/Bitbucket', category: 'tools', level: 'expert' },
     { name: 'Docker', category: 'tools', level: 'intermediate' },
-    { name: 'WordPress', category: 'tools', level: 'advanced' },
-    { name: 'Agile/Scrum', category: 'other', level: 'advanced' },
-    { name: 'UI/UX Design', category: 'other', level: 'advanced' },
+    { name: 'Azure / Jira / Clickup', category: 'tools', level: 'advanced' },
+    { name: 'Agile / Scrum', category: 'other', level: 'expert' },
     { name: 'Performance Optimization', category: 'other', level: 'expert' },
 ];
